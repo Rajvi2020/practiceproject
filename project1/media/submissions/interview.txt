@@ -1,0 +1,333 @@
+													  string
+													 
+1.What is a string in Python, and how do you create one?
+-->A string in Python is a data type used to store text (letters, words, sentences, or symbols).
+You create a string by writing text inside:
+single quotes ' 'or double quotes " "
+----------------------------------------------------------------------------------------------------------
+2.Explain the immutability of strings in Python. What does it mean, and why is it important?
+-->Immutability of strings in Python means that once a string is created, it cannot be changed (modified).
+What it means: If you try to change a part of a string, Python does not update the original string. Instead, it creates a new string.
+why: 1.cannot be accidentally changed
+	 2. improves performance and memory efficiency.
+---------------------------------------------------------------------------------------------------------------
+3.How do you access individual characters in a string?
+-->You can access individual characters in a string using indexing in Python.
+Each character in a string has a position number called an index.
+How it works:
+	1. Index starts from 0
+	2. First character = index 0
+	3. Second character = index 1, and so on
+------------------------------------------------------------------------------------------------------------------=
+4.What is string slicing, and how do you perform it in Python?
+-->String slicing is used to extract a part of a string using index range.
+You do slicing using square brackets with start and end index.
+How it works:
+start index → where slicing begins (included)
+end index → where slicing stops (not included)
+--------------------------------------------------------------------------------------------------------------------------
+5.How can you concatenate two or more strings in Python?
+-->String concatenation in Python means joining two or more strings together to make one string.
+1.+
+2.+=
+3.join
+-----------------------------------------------------------------------------------------------------------------------------
+6.What are some common string methods in Python, and what do they do?
+| Method      | What it does (Easy meaning)           |
+| ----------- | ------------------------------------- |
+| `lower()`   | Converts string to lowercase          |
+| `upper()`   | Converts string to uppercase          |
+| `strip()`   | Removes spaces from start and end     |
+| `replace()` | Replaces part of a string             |
+| `split()`   | Splits string into a list             |
+| `join()`    | Joins multiple strings into one       |
+| `find()`    | Finds position of a character or word |
+--------------------------------------------------------------------------------------------------------------------------------------
+7.How does the len() function work with strings?
+-->The len() function in Python is used to find the length of a string, which means the number of characters in it.
+How it works:
+- It counts all characters in the string
+- This includes letters, numbers, symbols, and spaces
+------------------------------------------------------------------------------------------------------------------------------------
+8.Explain the difference between upper(), lower(), and title() string methods.
+-->1. upper()
+Converts all characters to uppercase (capital letters)
+2. lower()
+Converts all characters to lowercase (small letters)
+3. title()
+Converts first letter of each word to uppercase and remaining letters to lowercase
+--------------------------------------------------------------------------------------------------------------------------------------------
+9.How do you remove whitespace from the beginning or end of a string?
+-->strip() removes extra spaces from both sides of a string.
+lstrip() → removes spaces from the left (beginning)
+rstrip() → removes spaces from the right (end)
+-----------------------------------------------------------------------------------------------------------------------------
+10.What is string formatting, and what are the different ways to format strings in Python?
+-->String formatting in Python means inserting values (like variables) into a string in a proper way.
+It is used to create dynamic strings (strings that change based on values).
+Different ways to format strings in Python:
+1. Using f-string (modern way)
+Most easy and commonly used
+Add f before string and use {} for variables
+
+2. Using .format() method
+Older but still used
+Uses {} as placeholders
+
+3. Using % operator
+Old method (less used now)
+Uses %s, %d as placeholders
+---------------------------------------------------------------------------------------------------------------------------
+11.Explain f-strings (formatted string literals) in Python and give an example.
+-->Using f-string (modern way)
+Most easy and commonly used
+Add f before string and use {} for variables
+example:
+name = "Alice"
+age = 20
+print(f"My name is {name} and I am {age} years old.")
+----------------------------------------------------------------------------------------------------------------------------------
+12.How do you check if a substring exists within a string in Python?
+-->You can check if a substring exists inside a string in Python using the in keyword.
+----------------------------------------------------------------------------------------------------------------------------------
+13.What is the purpose of the find() and index() methods? How do they differ?
+-->purpose: They help to find the position (index) of a character or word in a string.
+| Method    | What it does                                                         |
+| --------- | -------------------------------------------------------------------- |
+| `find()`  | Returns position if found, otherwise returns **-1**                  |
+| `index()` | Returns position if found, otherwise gives an **error (ValueError)** |
+--------------------------------------------------------------------------------------------------------------------------------------
+14.How can you split a string into a list of substrings?
+-->split() breaks a string into parts and stores them in a list.
+------------------------------------------------------------------------------------------------------------------------------------------
+15.How do you join a list of strings into a single string in Python?
+-->You can join a list of strings into a single string using the join() method in Python.
+join() combines all items of a list into one string.
+-------------------------------------------------------------------------------------------------------------------------------------
+16.Explain how to replace a substring within a string using the replace() method.
+-->It finds the old substring in the string
+Replaces it with a new substring
+Returns a new string (original string does not change)
+-----------------------------------------------------------------------------------------------------------------------------------------
+17.What is string interpolation, and how is it achieved in Python?
+-->same as formatting(10)
+---------------------------------------------------------------------------------------------------------------------------------------------
+18.How can you reverse a string in Python?
+-->Reverse means writing the string from last character to first character.
+----------------------------------------------------------------------------------------------------------------------------------------------
+19.How do startswith() and endswith() methods work with strings?
+-->🔹 startswith()
+👉 Checks if a string starts with a specific substring
+Returns True if it matches
+Otherwise returns False
+
+🔹 endswith()
+👉 Checks if a string ends with a specific substring
+Returns True if it matches
+Otherwise returns False
+-----------------------------------------------------------------------------------------------------------------------------------------------
+20.How do you compare two strings in Python? What operators or functions can be used?
+-->Strings are compared using relational operators based on equality and alphabetical order.
+| Operator | Meaning                                                     |
+| -------- | ----------------------------------------------------------- |
+| `==`     | Checks if two strings are equal                             |
+| `!=`     | Checks if two strings are not equal                         |
+| `<`      | Checks if first string comes before second (alphabetically) |
+| `>`      | Checks if first string comes after second (alphabetically)  |
+| `<=`     | Less than or equal to                                       |
+| `>=`     | Greater than or equal to                                    |
+==============================================================================================================================================================================================================================================================================================================													 			Tuple
+
+1.What is a tuple in Python, and how do you create one?
+-->A tuple in Python is a collection of items that is ordered and immutable (cannot be changed after creation).
+- Creating a Tuple: Use parentheses () and separate items with commas.
+example:
+t = (10, 20, 30)
+print(t)
+---------------------------------------------------------------------------------------------------------------------------
+2.How is a tuple different from a list in Python?
+| Feature      | List                                        | Tuple                              |
+| ------------ | ------------------------------------------- | ---------------------------------- |
+| Syntax       | `[]`                                        | `()`                               |
+| Mutable      | ✅ Can be changed                            | ❌ Cannot be changed                |
+| Performance  | Slightly slower                             | Slightly faster                    |
+| Memory Usage | More memory                                 | Less memory                        |
+| Methods      | Many methods (`append()`, `remove()`, etc.) | Few methods (`count()`, `index()`) |
+---------------------------------------------------------------------------------------------------------------------------
+3.What does it mean for a tuple to be immutable?
+-->In Python, immutable means that once a tuple is created, its elements cannot be changed, added, or removed.
+---------------------------------------------------------------------------------------------------------------------------
+4.How can you access elements in a tuple by index?
+-->Tuple elements are accessed using index numbers inside square brackets []. Indexing starts from 0, and negative indexes can be used to access elements from the end.
+---------------------------------------------------------------------------------------------------------------------------
+5.Explain how tuple slicing works in Python.
+-->Tuple slicing is used to extract a part of a tuple. It uses the syntax tuple[start:end:step], where start is inclusive, end is exclusive, and step specifies the interval between elements.
+---------------------------------------------------------------------------------------------------------------------------
+6.How can you create a single-element tuple?
+-->A single-element tuple is created by placing a comma after the element, such as (10,). The comma is required; otherwise, Python treats it as a normal value, not a tuple.
+---------------------------------------------------------------------------------------------------------------------------
+7.What are some situations where using a tuple is more beneficial than a list?
+-->Tuples are preferred when data should remain unchanged, when better performance and lower memory usage are needed, when returning multiple values from functions, and when using collections as dictionary keys.
+---------------------------------------------------------------------------------------------------------------------------
+8.How can you concatenate two tuples in Python?
+-->Two tuples can be concatenated using the + operator. This creates a new tuple containing the elements of both tuples because tuples are immutable.
+---------------------------------------------------------------------------------------------------------------------------
+9.Can you modify a tuple in Python? If not, why?
+-->No, a tuple cannot be modified because it is immutable. Once created, its elements cannot be changed, added, or removed. Any modification requires creating a new tuple.
+---------------------------------------------------------------------------------------------------------------------------
+10.How do you unpack values from a tuple into individual variables?
+-->Tuple unpacking is the process of assigning tuple elements to separate variables in one statement. For example, a, b, c = (10, 20, 30) assigns 10 to a, 20 to b, and 30 to c.
+---------------------------------------------------------------------------------------------------------------------------
+11.What is tuple packing and unpacking? Give an example.
+| Feature    | Tuple Packing                                 | Tuple Unpacking                                   |
+| ---------- | --------------------------------------------- | ------------------------------------------------- |
+| Definition | Combining multiple values into a single tuple | Extracting tuple values into individual variables |
+| Purpose    | Create a tuple                                | Access tuple elements easily                      |
+| Syntax     | `t = 10, 20, 30`                              | `a, b, c = t`                                     |
+| Result     | Values are stored in one tuple                | Values are assigned to separate variables         |
+| Example    | `t = ("Riya", 21, "BCA")`                     | `name, age, course = t`                           |
+example:
+| Operation | Code             | Output             |
+| --------- | ---------------- | ------------------ |
+| Packing   | `t = 10, 20, 30` | `(10, 20, 30)`     |
+| Unpacking | `a, b, c = t`    | `a=10, b=20, c=30` |
+---------------------------------------------------------------------------------------------------------------------------
+12.How can you check if an element exists within a tuple?
+-->You can use the in and not in operators to check whether an element exists in a tuple.
+example:
+t = ("Riya", "Priya", "Neha")
+
+if "Riya" in t:
+    print("Element found")
+else:
+    print("Element not found")
+---------------------------------------------------------------------------------------------------------------------------
+13.How do you find the length of a tuple in Python?
+-->You can find the number of elements in a tuple using the len() function.
+t = (10, 20, 30, 40, 50)
+print(len(t))
+---------------------------------------------------------------------------------------------------------------------------
+14.Explain the use of count() and index() methods in tuples.
+| Method    | Purpose                                                 | Syntax               |
+| --------- | ------------------------------------------------------- | -------------------- |
+| `count()` | Counts how many times an element appears in a tuple     | `tuple.count(value)` |
+| `index()` | Returns the index of the first occurrence of an element | `tuple.index(value)` |
+---------------------------------------------------------------------------------------------------------------------------
+15.How do you iterate over elements in a tuple?
+-->Tuple elements can be iterated using a for loop, while loop, or range() with len(). The most common method is a for loop.
+example:
+t = (10, 20, 30)
+
+for item in t:
+    print(item)
+---------------------------------------------------------------------------------------------------------------------------
+16.Can a tuple contain mutable data types, such as lists? If yes, how does it affect immutability?
+-->Yes. A tuple can contain mutable data types such as lists, dictionaries, or sets.
+- The tuple itself is immutable, meaning you cannot change its structure (add, remove, or replace elements).
+---------------------------------------------------------------------------------------------------------------------------
+17.How do you convert a list to a tuple, and vice versa?
+| Conversion    | Code                |
+| ------------- | --------------------|
+| List to Tuple | t = tuple(my_list)` |
+| Tuple to List | l = list(my_tuple)` |
+---------------------------------------------------------------------------------------------------------------------------
+18.How does Python handle memory management with tuples compared to lists?
+-->Tuples use less memory than lists because they are immutable and do not need extra space for resizing. Lists are mutable, so Python allocates additional memory to allow efficient growth, which makes them consume more memory.
+---------------------------------------------------------------------------------------------------------------------------
+19.What are named tuples, and how do they differ from regular tuples?
+| Regular Tuple             | Named Tuple                             |
+| ------------------------- | --------------------------------------- |
+| Accessed using indexes    | Accessed using indexes and field names  |
+| Less readable             | More readable                           |
+| Example: `( "Riya", 21 )` | Example: `Student(name="Riya", age=21)` |
+example:
+from collections import namedtuple
+
+Student = namedtuple("Student", ["name", "age"])
+s = Student("Riya", 21)
+
+print(s.name)
+---------------------------------------------------------------------------------------------------------------------------
+20.Explain how to use a tuple as a dictionary key.
+-->A tuple can be used as a dictionary key because it is immutable and hashable. However, all elements inside the tuple must also be hashable.
+===================================================================================================================================
+==========================================================================================================================================
+															User Defined Function
+1.What is a function in Python, and why are functions used?
+-->A function is a reusable block of code that performs a specific task. Functions are used to reduce code duplication, improve readability, and make programs easier to maintain.
+-----------------------------------------------------------------------------------------------------------------------------------
+2.How do you define a user-defined function in Python? Provide an example.
+-->A user-defined function is a function created by the programmer using the def keyword. It is used to perform a specific task and can be called whenever needed.
+-----------------------------------------------------------------------------------------------------------------------------------
+3.What is the purpose of the return statement in a function?
+-->The return statement is used to send a value from a function back to the caller. It also terminates the function execution.
+-----------------------------------------------------------------------------------------------------------------------------------
+4.What is the difference between a function that returns a value and one that doesn’t?
+-->A function with a return statement sends a value back to the caller, while a function without return only performs an action (such as printing) and returns None by default.
+-----------------------------------------------------------------------------------------------------------------------------------
+5.How do you call a function in Python?
+-->A function is called by using its name followed by parentheses. If the function requires arguments, they are passed inside the parentheses.
+-----------------------------------------------------------------------------------------------------------------------------------
+6.What are parameters and arguments in the context of functions?
+| Term          | Definition                                                          |
+| ------------- | ------------------------------------------------------------------- |
+| **Parameter** | A variable listed in the function definition that receives a value. |
+| **Argument**  | The actual value passed to the function when it is called.          |
+-----------------------------------------------------------------------------------------------------------------------------------
+7.What is the difference between positional and keyword arguments?
+-->Positional arguments are passed according to their position in the function call, whereas keyword arguments are passed using parameter names. In positional arguments, order matters; in keyword arguments, it does not.
+-----------------------------------------------------------------------------------------------------------------------------------
+8.Explain default parameters in Python functions and give an example.
+-->Default parameters are parameters that have a predefined value. If the caller does not provide an argument, the default value is used.
+-----------------------------------------------------------------------------------------------------------------------------------
+9.What is the purpose of *args in a function definition?
+-->*args allows a function to accept a variable number of positional arguments. It collects all extra arguments into a tuple.
+-----------------------------------------------------------------------------------------------------------------------------------
+10.How does **kwargs work in a function, and when would you use it?
+-->**kwargs collects multiple keyword arguments into a dictionary, making functions more flexible and reusable.
+-----------------------------------------------------------------------------------------------------------------------------------
+11.Can you explain the scope of variables inside a function (local vs. global scope)?
+| Local Variable                        | Global Variable                          |
+| ------------------------------------- | ---------------------------------------- |
+| Defined inside a function             | Defined outside functions                |
+| Accessible only within that function  | Accessible throughout the program        |
+| Exists only during function execution | Exists until the program ends            |
+| Cannot be used outside the function   | Can be used inside and outside functions |
+-----------------------------------------------------------------------------------------------------------------------------------
+12.What is the global keyword, and when is it used in a function?
+-->The global keyword is used inside a function to access and modify a variable that is defined outside the function (global scope).
+uses:
+- You need to modify a variable defined outside the function.
+- You want changes made inside the function to affect the variable globally.
+-----------------------------------------------------------------------------------------------------------------------------------
+13.What does the nonlocal keyword do, and how is it different from global?
+-->global is used to modify a variable defined outside all functions.
+-->nonlocal is used to modify a variable defined in an enclosing (outer) function from within a nested function.
+-----------------------------------------------------------------------------------------------------------------------------------
+14.How can you return multiple values from a function in Python?
+-->A Python function can return multiple values by separating them with commas in the return statement. The returned values are automatically packed into a tuple and can be unpacked into separate variables.
+-----------------------------------------------------------------------------------------------------------------------------------
+15.What is a lambda function, and how does it differ from a standard function?
+-->A lambda function is a small, anonymous, one-line function created using the lambda keyword. It is mainly used for simple operations where defining a full function with def is unnecessary.
+-----------------------------------------------------------------------------------------------------------------------------------
+16.Explain the concept of a recursive function and provide a simple example.
+-->A recursive function is a function that calls itself until a stopping condition is reached.
+-----------------------------------------------------------------------------------------------------------------------------------
+17.What are higher-order functions, and how can they be used in Python?
+-->A higher-order function is a function that can take another function as an argument or return a function as a result. Examples include map(), filter(), and user-defined functions that work with other functions.
+-----------------------------------------------------------------------------------------------------------------------------------
+18.What is function overloading, and does Python support it?
+-->Function Overloading is the ability to have multiple functions with the same name but different parameters. Python does not support traditional function overloading, but similar behavior can be achieved using default arguments and *args.
+-----------------------------------------------------------------------------------------------------------------------------------
+19.Explain the concept of function decorators and give an example of how to use one.
+-->
+-----------------------------------------------------------------------------------------------------------------------------------
+20.How can you use functions to improve code modularity and reusability?
+-->Functions improve modularity by dividing a program into smaller tasks and improve reusability by allowing the same code to be used multiple times without rewriting it.
+=====================================================================================================================================================
+==================================================================================================================================================
+
+
+
+object and instance diffrance
+Django architecture:MVT(model,view,template)
